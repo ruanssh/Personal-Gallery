@@ -1,2 +1,2 @@
-# [Personal-Gallery](ruanssh-gallery.rf.gd/)
+# <a href="ruanssh-gallery.rf.gd/" target="_blank">Personal-Gallery</a>
 A simple program to upload photos/gifs and view them in PHP.
