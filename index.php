@@ -9,10 +9,10 @@
 </head>
 <body>
   <form enctype="multipart/form-data" method="POST">
-      <h1>Enviar arquivo</h1>
+      <h1>Upload a File</h1>
       <input type="file" name="pic" required>    
       <br><br>
-      <input type="submit">
+      <input type="submit" value="Send">
       <br>
       <div class="links">
       <a href="gallery.php">Gallery</a> | <a href="img/" target="_blank">Index of</a>
