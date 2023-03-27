@@ -15,7 +15,7 @@
       <input type="submit">
       <br>
       <div class="links">
-      <a href="gallery.php" target="_blank">Gallery</a> | <a href="img/" target="_blank">Index of</a>
+      <a href="gallery.php">Gallery</a> | <a href="img/" target="_blank">Index of</a>
       </div>
   </form>
 </body>
