@@ -5,6 +5,7 @@
     <title>View</title>
     <link rel="stylesheet" href="style/gallery.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://i.imgur.com/yByguWH.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
