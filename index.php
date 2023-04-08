@@ -18,8 +18,6 @@
       <div class="links">
           <a href="gallery.php">Gallery</a> | <a href="img/" target="_blank">Index of</a>
       </div>
-      <br>
-      <button id="toggle-btn" type="button">Dark</button>
   </form>
   <script src="script.js"></script>
 </body>

@@ -1,37 +1,6 @@
 const gallery = document.querySelector('.gallery');
 const images = gallery.querySelectorAll('img');
 const body = document.querySelector('body');
-const toggleBtn = document.getElementById('toggle-btn');
-const isDarkMode = localStorage.getItem('isDarkMode');
-
-function updateButtonText() {
-  if (body.classList.contains('dark-mode')) {
-    toggleBtn.textContent = 'White';
-  } else {
-    toggleBtn.textContent = 'Dark';
-  }
-}
-
-if (isDarkMode === 'true') {
-  body.classList.add('dark-mode');
-  updateButtonText();
-}
-
-toggleBtn.addEventListener('click', function() {
-  body.classList.toggle('dark-mode');
-  updateButtonText();
-  localStorage.setItem('isDarkMode', body.classList.contains('dark-mode'));
-});
-
-const observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-    if (mutation.attributeName === 'class') {
-      updateButtonText();
-    }
-  });
-});
-observer.observe(body, { attributes: true });
-
 
 let modal = null;
 
