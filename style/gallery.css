@@ -122,7 +122,26 @@ a:hover {
         height: 200px;
     }
 }
-
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 14px;
+      }
+    .container {
+      padding: 10px;
+      max-width: none;
+    }
+    .image-container {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+  }
+  
 @media screen and (max-width: 768px) {
     .container {
         padding: 10px;
@@ -136,4 +155,24 @@ a:hover {
         height: auto;
         margin: 5px 0;
     }
+    .modal-img {
+        max-width: 70%;
+        max-height: 70%;
+      }
 }
+
+@media screen and (max-width: 480px) {
+    .gallery {
+      margin-top: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      margin: 5px 0;
+    }
+    .modal-img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+  
