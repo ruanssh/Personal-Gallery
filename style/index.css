@@ -1,67 +1,183 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto%20Mono);
-body
-{
-  font-family: 'Roboto Mono', sans-serif;
-  background-color: #f2f2f2;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
+
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    background-color: #f2f2f2;
 }
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 h1 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
-input[type="file"] {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  margin-bottom: 20px;
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 20px;
+.dark-mode .gallery img{
+    border: 5px solid #bbbbbb;
 }
+.gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 a {
-  font-size: 16px;
-  text-decoration: none;
-  color: #4CAF50;
+    margin-bottom: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #4CAF50;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-@media screen and (max-width: 767px) {
-  form {
-    margin-top: 20px;
-  }
-  h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  input[type="file"] {
-    
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  input[type="submit"] {
-    font-size: 14px;
-    
-    padding: 5px 10px;
-    margin-bottom: 10px;
-  }
-  a {
-    font-size: 14px;
-  }
+.gallery img:hover {
+    border-color: #4CAF50;
 }
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 9999;
+  }
+  
+  .modal-img {
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+@media screen and (max-width: 1200px) {
+    .gallery img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .gallery img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 14px;
+      }
+    .container {
+      padding: 10px;
+      max-width: none;
+    }
+    .image-container {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+  }
+  
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .gallery {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+    }
+    .modal-img {
+        max-width: 70%;
+        max-height: 70%;
+      }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+      margin-top: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      margin: 5px 0;
+    }
+    .modal-img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+  
