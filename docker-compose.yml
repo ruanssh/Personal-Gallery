@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    container_name: personal-gallery
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ruan/personal-gallery
+    environment:
+#      PHP_ERROR_REPORTING: E_ALL & ~E_DEPRECATED & ~E_NOTICE
+      PHP_MEMORY_LIMIT: 4096M
+      PHP_INI_MEMORY_LIMIT: 1g
+    expose:
+      - "80"
+    ports:
+      - "2002:80"
+    volumes:
+      - .:/var/www/html
+       

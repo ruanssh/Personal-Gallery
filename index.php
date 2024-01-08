@@ -25,7 +25,7 @@
 <?php
 if(isset($_FILES['pic']))
 {
-    $dir = 'img/';
+    $dir = './img/';
     $new_name = $_FILES['pic']['name'];
     $i = 1;
 
@@ -40,7 +40,7 @@ if(isset($_FILES['pic']))
     <script type='text/javascript'>
         alert('Arquivo enviado!');
     </script>
+    <meta http-equiv="refresh" content="1">
     <?php
-    header('Refresh:0; URL=index.php');
 } 
 ?>
